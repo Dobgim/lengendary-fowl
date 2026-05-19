@@ -222,10 +222,10 @@ const HomePage = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { id: '1', title: "Rhode Island Red", img: "https://images.unsplash.com/photo-1548509925-0e53ba215664", price: "45.00", category: "Live Birds" },
-              { id: '2', title: "Silkie Bantam", img: "https://images.unsplash.com/photo-1614059089539-65b1285226c6", price: "65.00", category: "Live Birds" },
-              { id: '3', title: "Premium Organic Feed", img: "https://images.unsplash.com/photo-1500595046743-cd271d694d30", price: "29.99", category: "Supplies" },
-              { id: '4', title: "Fertile Hatching Eggs", img: "https://images.unsplash.com/photo-1587595431973-160d0d94add1", price: "35.00", category: "Hatching Eggs" }
+              { id: '1', title: "Rhode Island Red", img: "/rhode_island_red.png", price: "45.00", category: "Live Birds" },
+              { id: '2', title: "Silkie Bantam", img: "/silkie_bantam.png", price: "65.00", category: "Live Birds" },
+              { id: '3', title: "Premium Organic Feed", img: "/organic_feed.png", price: "29.99", category: "Supplies" },
+              { id: '4', title: "Fertile Hatching Eggs", img: "/hatching_eggs.png", price: "35.00", category: "Hatching Eggs" }
             ].map((item, idx) => (
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -237,7 +237,7 @@ const HomePage = () => {
               >
                 <div className="aspect-[4/3] bg-slate-200 relative overflow-hidden">
                   <img 
-                    src={`${item.img}?auto=format&fit=crop&q=80&w=400&h=400`} 
+                    src={item.img}
                     alt={item.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
